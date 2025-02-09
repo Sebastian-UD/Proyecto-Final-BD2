@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block content %}
+
+    <h1>Crear sede</h1>
+
+    <form action="/sedes/create" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <button>
+            Enviar
+        </button>
+
+    </form>
+
+{% endblock %}

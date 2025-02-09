@@ -1,0 +1,20 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+    <h1>Sedes</h1>
+
+        <ul>
+            {% for sede in sedes %}
+
+            <a href="{% url 'sede_detail' sede.cod_sede %}">
+                <li>
+                    <p>Código: {{sede.cod_sede}}</p>
+                    <p>Nombre: {{sede.nombre_sede}}</p>
+                </li>
+            </a>
+
+            {% endfor %}
+        </ul>
+
+{% endblock %}
