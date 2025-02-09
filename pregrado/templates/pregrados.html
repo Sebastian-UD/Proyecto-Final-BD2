@@ -1,0 +1,24 @@
+{% extends 'layouts/base_pregrados.html' %}
+
+{% block content %}
+
+    <h1>Pregrados</h1>
+
+    {% for pregrado in pregrados %}
+
+    <ul>
+        <a href="">
+            <li>
+                <p>Código: {{pregrado.cod_pregrado}}</p>
+                <p>Código sede: {{pregrado.cod_sede.cod_sede}}</p>
+                <p>Region: {{pregrado.region}}</p>
+                <p>Nombre: {{pregrado.nombre}}</p>
+                <p>Créditos: {{pregrado.creditos}}</p>
+                <p>Nota mínima: {{pregrado.nota_minima}}</p>
+            </li>
+        </a>
+    </ul>
+
+    {% endfor %}
+
+{% endblock %}

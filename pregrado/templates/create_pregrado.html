@@ -1,0 +1,14 @@
+{% extends 'layouts/base_pregrados.html' %}
+
+{% block content %}
+
+    <form action="/pregrados/create" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <button>
+            Enviar
+        </button>
+    </form>
+
+{% endblock %}
